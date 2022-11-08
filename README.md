@@ -2,9 +2,11 @@
 
 ###### 项目简介
 
-- 爬去链家二手房相关信息
+- 爬取链家二手房相关信息
+- 爬取豆瓣top250
+- 爬取二手车信息
 
-### 新建数据表
+### 新建二手房数据表
 
 ```sql
 CREATE TABLE `houses`
@@ -38,5 +40,5 @@ CREATE TABLE `houses`
 
 ```golang
 // cd:表示成都 all:暂时只支持成都、北京、上海,如果想支持更多城市，在配置里面加一下就可以了
-go run main.go spider -c cd | all
+go run main.go house -c cd | all
 ```

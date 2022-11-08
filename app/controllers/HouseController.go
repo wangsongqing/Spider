@@ -42,7 +42,7 @@ func (h *House) initSpider(cityName string) {
 				for i = 1; i <= pageNum; i++ {
 					h.getHouseInfo(key, i, areaName)
 					sleepTime := publicHelpers.MakeRandInt()
-					time.Sleep(time.Second * time.Duration(sleepTime)) // 随机sleep，防止请求频繁
+					time.Sleep(time.Second * time.Duration(sleepTime)) // 随机sleep，防止请求频繁被禁IP
 				}
 			}
 		}
@@ -58,7 +58,7 @@ func (h *House) initSpider(cityName string) {
 			for i = 1; i <= pageNum; i++ {
 				h.getHouseInfo(cityName, i, areaName)
 				sleepTime := publicHelpers.MakeRandInt()
-				time.Sleep(time.Second * time.Duration(sleepTime)) // 随机sleep，防止请求频繁
+				time.Sleep(time.Second * time.Duration(sleepTime)) // 随机sleep，防止请求频繁被禁IP
 			}
 		}
 	}
